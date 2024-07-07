@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: #cfcfcf;
+}
+
+/* ============================================================================================= */
+/* -------------------------------------- BARRA NAVEGACION ------------------------------------- */
+/* ============================================================================================= */
+
+header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  backdrop-filter: contrast(0.3);
+  box-shadow: inset 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.logo-header {
+  height: 70px;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 40px;
+}
+
+.bounce-in-top1 {
+  animation: bounce-in-top 1s steps(1, start) both;
+}
+
+.bounce-in-top2 {
+  animation: bounce-in-top 1.5s steps(1, start) both;
+}
+
+.bounce-in-top3 {
+  animation: bounce-in-top 2s steps(1, start) both;
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+.nav-link {
+  color: white;
+  font-family: "Almarai", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-ul .nav-list {
+  position: relative;
+}
+
+.nav-ul .nav-list a::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.8s;
+}
+
+.nav-ul .nav-list a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar i {
+  font-size: 36px;
+  display: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+/* ============================================================================================= */
+/* ------------------------------------ CONTENEDOR PRINCIPAL ----------------------------------- */
+/* ============================================================================================= */
+
+.container-principal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attach {
+  position: relative;
+  background-image: url(./image/fondo-percha.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.attach::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(196 187 187 / 74%);
+}
+
+.container-descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  gap: 24px;
+  z-index: 1;
+}
+
+.container-title {
+  font-family: "Almarai", sans-serif;
+  font-weight: 800;
+}
+
+.container-par {
+  font-family: "Big Shoulders Display", sans-serif;
+  max-width: 65%;
+  font-size: 20px;
+}
+
+.span1,
+.span2 {
+  display: flex;
+}
+
+.logoEyE {
+  height: 350px;
+}
+
+.bottom {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px 25px;
+  font-size: 14px;
+  font-family: "Big Shoulders Display", sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.btn1 {
+  background-color: black;
+  color: white;
+  filter: drop-shadow(2px 4px 6px grey);
+}
+
+.btn2 {
+  color: black;
+  background-color: #ffffff00;
+}
+
+.container-image {
+  z-index: 1;
+}
+
+/* ============================================================================================= */
+/* ----------------------------------- SECCION DE INFORMACION ---------------------------------- */
+/* ============================================================================================= */
+
+.section-info1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 150px 100px 100px 100px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 30px;
+  height: 250px;
+  width: 350px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.card-tittle {
+  font-family: "Almarai", sans-serif;
+  font-weight: 800;
+}
+
+.card-parr {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 500;
+}
+
+/* ============================================================================================= */
+/* ----------------------------------- CARDS DE ZAPATILLAS ---------------------------------- */
+/* ============================================================================================= */
+
+.tittle-prendas {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  padding-left: 150px;
+  padding-top: 100px;
+}
+
+.cajas-zapas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 50px 25px;
+}
+
+.card-zapatillas,
+.card-arriba {
+  /* background-color: black; */
+  padding: 15px 10px;
+  border-radius: 30px;
+  /* box-shadow: 14px 14px 5px 0px rgb(0 0 0 / 60%); */
+}
+
+.card-img {
+  border-radius: 30px /*  10px 0 0 */;
+}
+
+.card-marca {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  /* color: white; */
+}
+
+.card-price {
+  font-family: "Almarai", sans-serif;
+  font-size: 12px;
+  /* color: white; */
+}
+
+/* ============================================================================================= */
+/* ---------------------------------- CARDS DE PARTE DE ARRIBA --------------------------------- */
+/* ============================================================================================= */
+
+.caja-arriba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ============================================================================================= */
+/* ------------------------------------------- FOOTER ------------------------------------------ */
+/* ============================================================================================= */
+
+#contactanos {
+  background-color: black;
+  margin-top: 150px;
+  border-top: 8px solid white;
+}
+
+.footer {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.footer-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tittle-footer {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 80px;
+}
+
+.contacto-fot-tittle {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.contacto-fot-par {
+  font-family: "Almarai", sans-serif;
+  font-size: 12px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 2rem;
+}
+
+.icon-redes {
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+/* ============================================================================================= */
+/* ---------------------------------------- MEDIAQUARIES --------------------------------------- */
+/* ============================================================================================= */
+
+@media (max-width: 992px) {
+  iframe {
+    width: 350px;
+    height: 200px;
+  }
+
+  .card-info {
+    height: 200px;
+    width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-ul {
+    background: white;
+    width: 100%;
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+  #toggle-menu:checked ~ .nav-ul {
+    display: flex;
+    background: #959595e8;
+    gap: 4rem;
+    border-radius: 0px 0px 40px 40px;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    font-family: "Big Shoulders Display", sans-serif;
+    letter-spacing: 5px;
+    font-weight: 900;
+    color: black;
+  }
+
+  .container-descripcion {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .span1 {
+    justify-content: center;
+  }
+
+  .container-image {
+    display: none;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .tittle-prendas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    font-size: 300%;
+  }
+
+  .cajas-zapas,
+  .caja-arriba {
+    gap: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .section-info1 {
+    margin: 150px 20px 150px 20px;
+  }
+
+  .card-info {
+    height: 250px;
+  }
+
+  .card-tittle {
+    font-size: 15px;
+  }
+
+  #zapatillas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-img {
+    width: 90%;
+  }
+
+  .card-arriba {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  .tittle-footer {
+    font-size: 50px;
+  }
+}
